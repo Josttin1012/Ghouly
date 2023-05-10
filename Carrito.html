@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Ghouly Store</title>
+    <link rel="stylesheet" href="CarritoCss.css">
+    <script>
+        // Obtener la tabla del carrito
+        const tablaCarrito = document.querySelector('#tabla-carrito tbody');
+      
+        // Obtener los productos del carrito en localStorage
+        let productosEnCarrito = JSON.parse(localStorage.getItem('productosEnCarrito')) || [];
+      
+        // Mostrar los productos en la tabla del carrito
+        productosEnCarrito.forEach(producto => {
+          // Crear una fila para el producto
+          const fila = document.createElement('tr');
+          fila.innerHTML = `
+            <td>${producto.nombre}</td>
+            <td>${producto.precio}</td>
+          `;
+      
+          // Agregar la fila a la tabla del carrito
+          tablaCarrito.appendChild(fila);
+        });
+      </script>
+      
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="Principal.html">Inicio</a></li>
+        <li><a href="Productos.html">Productos</a></li>
+        <li><a href="Carrito.html">Carrito</a></li>
+      </ul>
+    </nav>
+    <main>
+        <div class="header">
+            <h1>Carrito de Compras</h1>
+          </div>
+    </main>
+    <footer>
+      <p>© Ghouly Store - Todos los derechos reservados</p>
+    </footer>
+  </body>
+</html>

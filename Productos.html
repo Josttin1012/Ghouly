@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Ghouly Store</title>
+    <link rel="stylesheet" href="ProductosCss.css">
+    <script>
+        // Seleccionar todos los botones de "Agregar al carrito"
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+      
+        // Agregar un evento click a cada botón
+        addToCartButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            // Obtener el producto más cercano al botón presionado
+            const producto = button.closest('.producto');
+      
+            // Obtener los detalles del producto
+            const nombre = producto.querySelector('h3').textContent;
+            const precio = producto.querySelector('p:last-of-type').textContent;
+      
+            // Crear un objeto con los detalles del producto
+            const productoSeleccionado = { nombre, precio };
+      
+            // Agregar el producto al carrito en localStorage
+            let productosEnCarrito = JSON.parse(localStorage.getItem('productosEnCarrito')) || [];
+            productosEnCarrito.push(productoSeleccionado);
+            localStorage.setItem('productosEnCarrito', JSON.stringify(productosEnCarrito));
+          });
+        });
+      </script>
+      
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="Principal.html">Inicio</a></li>
+        <li><a href="Productos.html">Productos</a></li>
+        <li><a href="Carrito.html">Carrito</a></li>
+      </ul>
+    </nav>
+    <main>
+        <div class="productos-container">
+            <div class="producto">
+              <img src="https://via.placeholder.com/300x300" alt="Producto 1">
+              <h3>Producto 1</h3>
+              <p>Descripción del producto 1.</p>
+              <p>$19.99</p>
+              <button class="add-to-cart">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+              <img src="https://via.placeholder.com/300x300" alt="Producto 2">
+              <h3>Producto 2</h3>
+              <p>Descripción del producto 2.</p>
+              <p>$24.99</p>
+              <button class="add-to-cart">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+              <img src="https://via.placeholder.com/300x300" alt="Producto 3">
+              <h3>Producto 3</h3>
+              <p>Descripción del producto 3.</p>
+              <p>$14.99</p>
+              <button class="add-to-cart">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+              <img src="https://via.placeholder.com/300x300" alt="Producto 4">
+              <h3>Producto 4</h3>
+              <p>Descripción del producto 4.</p>
+              <p>$29.99</p>
+              <button class="add-to-cart">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+              <img src="https://via.placeholder.com/300x300" alt="Producto 5">
+              <h3>Producto 5</h3>
+              <p>Descripción del producto 5.</p>
+              <p>$9.99</p>
+              <button class="add-to-cart">Agregar al carrito</button>
+            </div>
+            <div class="producto">
+              <img src="https://via.placeholder.com/300x300" alt="Producto 6">
+              <h3>Producto 6</h3>
+              <p>Descripción del producto 6.</p>
+              <p>$34.99</p>
+              <button class="add-to-cart">Agregar al carrito</button>
+            </div>
+          </div>
+    </main>
+    <footer>
+      <p>© Ghouly Store - Todos los derechos reservados</p>
+    </footer>
+  </body>
+</html>
+  

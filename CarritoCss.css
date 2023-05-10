@@ -1,0 +1,122 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilos del navbar */
+  nav {
+    background-color: black;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem;
+  }
+  
+  nav a:hover {
+    background-color: red;
+}
+/* Estilos de carrito*/
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    font-size: 36px;
+    margin: 100px 0 50px;
+    text-align: center;
+  }
+  
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .cart-item img {
+    max-width: 100px;
+    margin-right: 20px;
+  }
+  
+  .cart-item-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .cart-item-info h2 {
+    font-size: 24px;
+    margin: 0 0 10px 0;
+  }
+  
+  .cart-item-info p {
+    margin: 0;
+  }
+  
+  .cart-item-price {
+    font-size: 24px;
+    margin-left: auto;
+  }
+  
+  .total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 36px;
+    margin-top: 50px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+  }
+  
+  .total strong {
+    font-size: 48px;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #333;
+  }
+  
+
+   /* Estilos del footer */
+   footer {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+  
